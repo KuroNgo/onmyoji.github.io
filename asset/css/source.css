@@ -1,0 +1,433 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Console", Courier, monospace;
+}
+.website{
+    overflow: hidden;
+}
+body::-webkit-scrollbar {
+    width: 13px;
+    background-color: rgba(0,0,0,.3);
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(.44,#42506e),color-stop(0.72,#274364),color-stop(.86,#1b2838));
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    overflow-y: scroll;
+    min-height: 150vh;
+}
+.viewport-all 
+{
+    background: radial-gradient(rgb(248, 6, 6),rgba(207, 88, 33, 0.836))
+}
+.viewport {
+    /* radial-gradient(rgba(53,53,53,.8),#000) */
+    background-image: url(/asset/img/slider/role1_bg_16a753d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+/* CSS chung */
+.text-color
+{
+    color: #fff !important;
+}
+a
+{
+    text-decoration: none;
+}
+/* header-section */
+#header-section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh; /*vh: viewport height*/
+    background: url(/asset/img/slider/cò\ sp.jpg);
+    background-position: center;
+    background-attachment: fixed;/*Thiết lập background scroll-cuộn theo thành phần.*/
+    background-size: cover;
+    display: flex; /* flex là thuộc tính có trong CSS3, giúp sắp xếp, bố cục các thành phần khối (block) một cách dễ dàng, linh hoạt. */
+    justify-content: center;/*Căn chỉnh nội dung bên trong container có flexbox*/
+    align-items: center;/*Căn chỉnh phần tử con theo hướng trung tâm hướng chính*/
+    /* Non-retangular Header using CSS3 Clip-path */
+    clip-path: circle(175vh at 50% -80vh);
+}
+#header-section .nav
+{
+    max-width: 100% ;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+.nav a button
+{
+    position: relative;
+    margin-top: 30px;
+    background-color: #732c2a;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 20px 20px;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    letter-spacing: 4px;
+    border:none;
+    animation: nav-buttom ease 2s;
+    animation-delay: 0.01s;
+}
+.nav a:hover button
+{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+}
+/* slider */
+#slider
+{
+    margin-top: 60px;
+}
+.margin-background
+{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* content */
+.overview-glass, 
+#content-shikigami {
+    display: flex;
+    justify-content: space-between;
+}
+.content .content-section
+{
+    font-size: 1.8rem;
+    margin-top: 110px;
+    text-align: center;
+    color: #ad978c;
+    letter-spacing: 4px;
+    margin-bottom: 45px;
+
+}
+.content
+{
+    
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.content-content
+{
+    backdrop-filter: blur(3px);
+    background-color: rgb(44 107 105 / 100%);
+    border-radius: 20px;
+    padding: 15px;
+}
+.content .text-title
+{
+    text-align: center;
+}
+.content p
+{
+    margin-top: 5px;
+    text-align: justify;
+    line-height: 24px;
+}
+#content-shikigami .content-introduce,
+#content-shikigami .content-rarity
+{
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(44 107 105 / 100%);
+    backdrop-filter: blur(3px);
+    color: #f3f6f6;
+    padding: 30px 15px;
+    border-radius: 10px;
+    width: 60%;
+    
+}
+#content-shikigami .content-rarity
+{
+    margin-left: 5px;
+}
+
+.content-soul p
+{
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(44 107 105 /100%);
+    color: #fff;
+    padding:10px;
+    margin-bottom: 50px;
+
+}
+iframe
+{
+    border-radius: 20px;
+}
+/* Dùng chung */
+.border
+{
+    margin: 15px auto 40px;
+    width: 300px;
+    height: 3px;
+    background-color: #ad978c;
+    margin-bottom: 60px;
+}
+/* container */
+.container
+{
+    position:relative;
+    width: 100%;
+    height:600px;
+    background:rgba(255, 255, 255, 0.7);
+    border-radius: 40px;
+}
+.container .clip
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.container .clip.clip1
+{
+    background: url(/asset/img/slider/bth2.PNG);
+    background: cover;
+    clip-path: polygon(35% 0, 0 0, 0 100%, 35% 100%);
+}
+.container .clip.clip2
+{
+    background: url(/asset/img/slider/quỷ\ ddoonhf\ hoàn\ 2.jpg);
+    background-size: cover;
+    clip-path: polygon(70% 0, 35% 0, 35% 100%, 70% 100%);
+
+}
+.container .clip.clip3
+{
+    background: url(/asset/img/slider/khan2.PNG);
+    background-size: cover;
+    clip-path: polygon(100% 0, 70% 0, 70% 100%, 100% 100%);
+}
+.container:hover .clip
+{
+    
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover
+{
+    transition-delay: 0.4s ;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+.container .clip .content
+{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 60%;
+    padding: 20px;
+    color: #fff;
+    opacity: 0;
+    background:#e29e3b45;
+    border-radius: 15px;
+    transition: 0.5s;
+    transform: translateY(40px);
+}
+.container .clip:hover .content
+{
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+    opacity: 1;
+    
+}
+.container-soul
+{
+    background: rgba(255, 255, 255, 0.897);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    scroll-behavior: initial;
+}
+.container-soul::-webkit-scrollbar {
+    width: 13px;
+    background-color: rgba(0,0,0,.3);
+}
+.container-soul::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(.44,#474c57cc),color-stop(0.72,#4c6077e8),color-stop(.86,#223244da));
+}
+.container-soul .img-container
+{
+    width: 291px;
+}
+.container-soul .box-soul
+{
+    position: relative;
+    width: 280px;
+    margin: 20px 15px;
+
+}
+.img-container img
+{
+    width: 231px;
+    height: 250px;
+}
+.container-soul .box-soul .img-container
+{
+    top:0;
+    left: 0;
+}
+
+.container-soul .box-soul .content-soul-2
+{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: justify;
+    color:#0d0e0e;
+    font-size: 15px;
+}
+.container-soul .box-soul .content-soul-2 h2
+{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.container-soul .box-soul .content-soul-2 a
+{
+    text-decoration: none;
+    background: #000000af;
+    color: #fff;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.box-soul .content-2
+{
+    margin-bottom: 140px;
+}
+.box-soul .content-3
+{
+    margin-bottom: 120px;
+}
+.end-web
+{
+    width: 100%;
+    margin-top: 100px;
+    background: #870a06d0;
+    color: #fff;
+    text-align: center;
+}
+.end-web p
+{
+    font-size: 1.8rem;
+
+}
+.end-web p strong
+{
+    color:rgba(0, 0, 0, 0.644);
+}
+.dowload-onmyoji .container img
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    animation: zoom 15s linear infinite;
+    object-fit: cover;
+}
+
+.content-soul-2 p
+{
+    margin-bottom: 30px;
+}
+.container a
+{
+    z-index: 10;
+}
+.dowload-onmyoji
+{
+   
+    width: 1200px;
+     height: 600px;
+     display: block;
+     overflow: hidden;
+   
+}
+.container a {
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    background:url(/asset/img/slider/btn-bg2.png);
+    top: 50%;
+    filter: drop-shadow(0 .1rem .3rem rgb(59, 59, 59));
+    line-height: 0;
+    left: 50%;
+    padding: 50px;
+    font-size: 1.8em;
+    transform: translate(-50%,-50%);
+}
+.container a:hover
+{
+    opacity: 0.8;
+}
+.no-container
+{
+    width: 100%;
+    height: 100px;
+}
+.icon-btn
+{
+    padding-top: 50px;
+}
+.icon-btn .icon
+{
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.icon-btn .icon-fb
+{
+    background: blue;
+}
+.icon-btn .icon-tw
+{
+    background: rgb(4, 185, 240);
+}
+.icon-btn .icon-yt
+{
+    background: red;
+}
+.icon-btn .icon-git
+{
+    background: #ccc;
+}
+.icon-btn .icon
+{
+    opacity: 1;
+    color: #fff;
+    filter: drop-shadow(0 .1rem .3rem rgb(59, 59, 59));
+}
+.icon-btn .icon:hover
+{
+    opacity: 0.8;
+}
