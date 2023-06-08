@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lucida Console", Courier, monospace;
+    font-family: "Sofia, serif";
 }
 .website{
     overflow: hidden;
@@ -341,10 +341,12 @@ iframe
     font-size: 1.8rem;
 
 }
+
 .end-web p strong
 {
     color:rgba(0, 0, 0, 0.644);
 }
+
 .dowload-onmyoji .container img
 {
     display: block;
